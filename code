@@ -1,0 +1,37 @@
+def cl():
+    class A:
+        def __init__(self,name):
+            self.name = name
+            
+    class B(A):
+        def __init__(self,name,age):
+            super().__init__(name)
+            self.age=age
+    
+    class C(B):
+        def __init__(self,name,age,village):
+            super().__init__(name,age)
+            self.village = village
+    
+    class D(C):
+        def __init__(self,name,age,village,father,mother,cast):
+            super().__init__(name,age,village)
+            self.mother = mother
+            self.father = father
+            self.cast = cast
+            
+        def det(self):
+            print(f"Your name is : {self.name}\nYour age is : {self.age}\nYour village is : {self.village}\nYour father name is : {self.father}\nYour mother name is : {self.mother}\nYour caste is : {self.cast}")
+            
+    a = input("Enter your name : ")    
+    b = input("Enter age : ")    
+    c = input("Enter your village name : ")  
+    d = input("Enter your father name : ")    
+    e = input("Enter your mother name :")    
+    f = input("Enter your cast name : ")    
+  
+       
+    p = D(a,b,c,d,e,f)
+    p.det()
+
+cl()
